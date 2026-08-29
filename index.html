@@ -564,7 +564,7 @@ main#stage{flex:1 1 auto;position:relative;overflow:hidden;z-index:1;}
     </div>
     <h1 class="gate-logo">TalcoITN</h1>
     <div class="gate-sub">Talco IT Networks (ITN)</div>
-    <div class="gate-sub" style="margin-top:.2rem;opacity:.6;">Version 48.2</div>
+    <div class="gate-sub" style="margin-top:.2rem;opacity:.6;">Version 51.2</div>
   </div>
 
   <div class="gate-card glass">
@@ -5964,7 +5964,7 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 align-items: center;
                 gap: 0.9rem;
                 padding: 0 1.1rem;
-                height: 62px;
+                height: 78px;
                 z-index: 10;
                 background: linear-gradient(90deg,rgba(167,139,250,0.12) 0%,rgba(10,5,22,0.65) 40%,rgba(244,114,182,0.1) 100%);
                 border-top: 1px solid rgba(255,255,255,0.18);
@@ -5987,13 +5987,13 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
             }
 
             .mp-art {
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 flex-shrink: 0;
                 overflow: hidden;
                 box-shadow: 0 4px 14px rgba(0,0,0,0.45);
@@ -6006,7 +6006,7 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
             }
 
             .mp-title {
-                font-size: 0.79rem;
+                font-size: 0.9rem;
                 font-weight: 600;
                 white-space: nowrap;
                 overflow: hidden;
@@ -6014,7 +6014,7 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
             }
 
             .mp-artist {
-                font-size: 0.68rem;
+                font-size: 0.76rem;
                 color: var(--muted);
                 white-space: nowrap;
                 overflow: hidden;
@@ -6054,13 +6054,13 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
             }
 
             .mp-cbtn svg {
-                width: 15px;
-                height: 15px;
+                width: 19px;
+                height: 19px;
             }
 
             .mp-pbtn {
-                width: 33px;
-                height: 33px;
+                width: 42px;
+                height: 42px;
                 border-radius: 50%;
                 background: var(--text);
                 border: none;
@@ -6077,8 +6077,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
             }
 
             .mp-pbtn svg {
-                width: 14px;
-                height: 14px;
+                width: 18px;
+                height: 18px;
                 color: #06061e;
                 margin-left: 1px;
             }
@@ -6947,64 +6947,133 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 color: #fff;
             }
 
-            .np-actions {
-                display: flex;
-                gap: 0.7rem;
-                margin-bottom: 1.2rem;
+            .np-lyrics {
                 width: 100%;
-                justify-content: center;
-                flex-wrap: wrap;
+                flex: 1;
+                min-height: 130px;
+                margin-bottom: 1.2rem;
+                border-radius: 22px;
+                background: #14101f;
+                border: 1px solid rgba(255,255,255,0.08);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 10px 30px rgba(0,0,0,0.35);
+                overflow-y: auto;
+                overflow-x: hidden;
+                -webkit-overflow-scrolling: touch;
             }
 
-            .np-action-btn {
-                display: flex;
-                align-items: center;
-                gap: 0.45rem;
-                padding: 0.5rem 0.9rem;
-                border-radius: 100px;
-                background: rgba(255,255,255,0.08);
-                border: 1px solid rgba(255,255,255,0.16);
+            .np-lyrics-inner {
+                padding: 1.3rem 1.4rem 1.5rem;
+                text-align: center;
+            }
+
+            .np-lyrics-header {
+                font-family: 'Syne',sans-serif;
+                font-size: 1.2rem;
+                font-weight: 800;
+                letter-spacing: -0.01em;
                 color: var(--text);
+                text-align: left;
+                margin-bottom: 0.3rem;
+            }
+
+            .np-lyrics-subtitle {
                 font-size: 0.78rem;
-                font-weight: 500;
+                color: var(--muted);
+                text-align: left;
+                margin-bottom: 0.9rem;
+            }
+
+            .np-lyrics-text {
                 font-family: 'DM Sans',sans-serif;
+                font-size: 0.98rem;
+                line-height: 1.75;
+                font-weight: 500;
+                color: rgba(255,255,255,0.82);
+                text-align: left;
+            }
+
+            .np-lyrics-more {
+                color: var(--text);
+                font-weight: 800;
                 cursor: pointer;
-                transition: all 0.2s;
-                backdrop-filter: blur(16px);
-                box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
+                white-space: nowrap;
             }
 
-            .np-action-btn:hover {
-                background: rgba(255,255,255,0.14);
-            }
-
-            .np-action-btn svg {
-                width: 14px;
-                height: 14px;
+            .np-lyrics-more:hover {
                 color: var(--c1);
             }
 
-            .np-disco-btn {
-                width: 100%;
-                padding: 0.9rem;
-                border-radius: 18px;
-                background: linear-gradient(135deg,rgba(244,114,182,0.22),rgba(56,189,248,0.22));
-                border: 1px solid rgba(244,114,182,0.32);
-                color: var(--text);
-                font-size: 0.88rem;
-                font-weight: 600;
+            .np-lyrics-inner p {
                 font-family: 'DM Sans',sans-serif;
-                cursor: pointer;
-                transition: all 0.2s;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.5rem;
-                margin-bottom: 1.5rem;
+                font-size: 1.15rem;
+                line-height: 1.9;
+                font-weight: 600;
+                letter-spacing: 0.01em;
+                color: rgba(255,255,255,0.38);
+                margin: 0 0 1.1rem;
+                transition: color 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
+                transform: scale(0.97);
             }
 
-            .np-disco-btn:hover {
-                background: linear-gradient(135deg,rgba(244,114,182,0.32),rgba(56,189,248,0.32));
+            .np-lyrics-inner p.past {
+                color: rgba(255,255,255,0.22);
+            }
+
+            .np-lyrics-inner p.active {
+                color: var(--text);
+                transform: scale(1.04);
+            }
+
+            .np-lyrics-inner p.np-lyrics-chorus {
+                background: linear-gradient(135deg,rgba(255,255,255,0.35),rgba(255,255,255,0.35));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-size: 1.28rem;
+                font-weight: 800;
+            }
+
+            .np-lyrics-inner p.np-lyrics-chorus.past {
+                background: linear-gradient(135deg,rgba(255,255,255,0.16),rgba(255,255,255,0.16));
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+
+            .np-lyrics-inner p.np-lyrics-chorus.active {
+                background: linear-gradient(135deg,var(--c1),var(--c2));
+                -webkit-background-clip: text;
+                background-clip: text;
+                transform: scale(1.06);
+            }
+
+            .np-lyrics-hint {
+                opacity: 0.5;
+                font-style: italic;
+                font-weight: 400!important;
+            }
+
+            .np-lyrics::-webkit-scrollbar { width: 5px; }
+            .np-lyrics::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 10px; }
+
+            /* ---------- Adaptation aux écrans à faible hauteur (plein écran mobile) ---------- */
+            @media (max-height: 780px) {
+                .np-art-wrap { margin: 0.5rem 0 0.7rem; }
+                .np-art { width: 150px; height: 150px; font-size: 3.5rem; }
+                .np-meta { margin-bottom: 0.6rem; }
+                .np-prog-wrap { margin-bottom: 0.5rem; }
+                .np-ctrl { margin-bottom: 0.6rem; gap: 1rem; }
+            }
+
+            @media (max-height: 620px) {
+                .np-header { padding: 0.6rem 1.2rem 0; }
+                .np-art-wrap { margin: 0.2rem 0 0.5rem; }
+                .np-art { width: 96px; height: 96px; font-size: 2.2rem; }
+                .np-title { font-size: 1.1rem; }
+                .np-artist { font-size: 0.8rem; }
+                .np-date { display: none; }
+                .np-meta { margin-bottom: 0.4rem; }
+                .np-prog-wrap { margin-bottom: 0.35rem; }
+                .np-ctrl { margin-bottom: 0.4rem; gap: 0.8rem; }
             }
 
             /* ── PLAYLISTS ── */
@@ -8012,13 +8081,7 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                                 🎲 Aléatoire
         
                             </div>
-                            <a href="https://natlacaxi.github.io/paroles-music" target="_blank" class="paroles-btn">
-                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                                </svg>
-                                Paroles
-        
-                            </a>
+
                         </div>
                         <div class="prog-row">
                             <span class="t-lbl" id="tCur">0:00</span>
@@ -8207,45 +8270,14 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                         </svg>
                     </button>
                 </div>
-                <div class="np-actions">
-                    <button class="np-action-btn" onclick="downloadCurrentTrack()">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14" height="14">
-                            <polyline points="8 17 12 21 16 17"/>
-                            <line x1="12" y1="12" x2="12" y2="21"/>
-                            <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"/>
-                        </svg>
-                        Télécharger
-      
-                    </button>
-                    <button class="np-action-btn" onclick="toggleDiscoMode();closeNowPlaying();">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14" height="14">
-                            <circle cx="12" cy="12" r="5"/>
-                            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83"/>
-                        </svg>
-                        Mode Disco
-      
-                    </button>
-                    <a href="https://natlacaxi.github.io/paroles-music" target="_blank" class="np-action-btn" style="text-decoration:none;">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14" height="14">
-                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                        </svg>
-                        Paroles
-      
-                    </a>
-                    <a href="https://natlacaxi.github.io/dj-music" target="_blank" class="np-action-btn" style="text-decoration:none;">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14" height="14">
-                            <circle cx="12" cy="12" r="3"/>
-                            <circle cx="12" cy="12" r="9"/>
-                        </svg>
-                        DJ Mode
-      
-                    </a>
+                <div class="np-lyrics" id="npLyrics">
+                    <div class="np-lyrics-inner" id="npLyricsInner">
+                        <div class="np-lyrics-header">Paroles</div>
+                        <div class="np-lyrics-text">Aucune paroles pour le moment</div>
+                    </div>
                 </div>
-                <button class="np-disco-btn" onclick="toggleDiscoMode();closeNowPlaying();">🪩 Mode Soirée Tuff Maxi
-    </button>
             </div>
         </div>
-        <!-- ══ PLAYLISTS ══ -->
         <div class="overlay" id="overlayPlaylists" onclick="closeSheet(this)">
             <div class="sheet playlist-sheet" onclick="event.stopPropagation()">
                 <div class="sheet-handle" id="plHandle"></div>
@@ -8686,6 +8718,25 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
 
             // ══ TRACKS DATA ══
             
+            // Paroles synchronisées : clé = titre exact du morceau (voir TRACKS ci-dessous).
+            // t = temps en secondes où la ligne doit s'afficher/se surligner.
+            // ⚠️ Exemple ABCDEFU rempli avec un texte générique à remplacer par les vraies
+            // paroles + les vrais timestamps (droit d'auteur : je ne peux pas les fournir).
+            const LYRICS_DB = {
+                "ABCDEFU": [
+                    { t: 0,  text: "[Intro]" },
+                    { t: 8,  text: "Ligne du premier couplet, à remplacer" },
+                    { t: 14, text: "Deuxième ligne du couplet, à remplacer" },
+                    { t: 20, text: "Troisième ligne du couplet, à remplacer" },
+                    { t: 26, text: "Quatrième ligne du couplet, à remplacer" },
+                    { t: 32, text: "A-B-C-D-E, F-U", chorus: true },
+                    { t: 36, text: "Ligne du refrain à compléter", chorus: true },
+                    { t: 42, text: "Ligne du refrain à compléter", chorus: true },
+                    { t: 48, text: "Ligne du refrain à compléter", chorus: true },
+                    { t: 54, text: "Nah, nah, nah, nah, nah, nah, nah, nah" },
+                ]
+            };
+
             const TRACKS = [
             {
                 title: "1-28",
@@ -8693,7 +8744,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "Inconnu",
                 emoji: "🎵",
                 g: ["#374151", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/1-28_prliva.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/1-28_prliva.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "ABCDEFU",
@@ -8701,7 +8753,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🔤",
                 g: ["#059669", "#6ee7b7"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483811/Abcdefu_-_Gayle_uj631e.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483811/Abcdefu_-_Gayle_uj631e.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Abracadabra",
@@ -8709,7 +8762,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🪄",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Abracadabra_-_Lady_Gaga_ysahnb.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Abracadabra_-_Lady_Gaga_ysahnb.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ainsi Bas la Vida",
@@ -8717,7 +8771,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "🌹",
                 g: ["#1e3a5f", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004733/Ainsi_Bas_la_Vida_-_Indila_dnq3tp.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004733/Ainsi_Bas_la_Vida_-_Indila_dnq3tp.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Air Force Blanche",
@@ -8725,7 +8780,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "👟",
                 g: ["#1e3a5f", "#93c5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Air_Force_Blanche_-_Gims_Jul_abvccz.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Air_Force_Blanche_-_Gims_Jul_abvccz.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Alibi",
@@ -8733,7 +8789,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🕵️",
                 g: ["#be185d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003137/Alibi_-_Sevdaliza_Pabllo_Vittar_Yseult_aqwn0s.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003137/Alibi_-_Sevdaliza_Pabllo_Vittar_Yseult_aqwn0s.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Alors la Zone",
@@ -8741,7 +8798,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🏙️",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Alors_la_Zone_-_Jul_h4fch1.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Alors_la_Zone_-_Jul_h4fch1.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Alors on Danse",
@@ -8749,7 +8807,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2009",
                 emoji: "🕺",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003654/Alors_on_Danse_-_Stromae_llw77i.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003654/Alors_on_Danse_-_Stromae_llw77i.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Andalouse",
@@ -8757,7 +8816,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "🎸",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011061/Andalouse_-_Kendji_Girac_ubcjxb.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011061/Andalouse_-_Kendji_Girac_ubcjxb.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Animals",
@@ -8765,7 +8825,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2013",
                 emoji: "🐾",
                 g: ["#b91c1c", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003503/Animals_-_Martin_Garrix_j6x3wj.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003503/Animals_-_Martin_Garrix_j6x3wj.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "APT.",
@@ -8773,7 +8834,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🏠",
                 g: ["#9d174d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483813/Apt_-_Ros%C3%A9_Bruno_Mars_cbc4gx.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483813/Apt_-_Ros%C3%A9_Bruno_Mars_cbc4gx.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Around the World",
@@ -8781,7 +8843,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌍",
                 g: ["#065f46", "#6ee7b7"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483813/Around_the_World_-_Niklas_Dee_xvvfz8.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483813/Around_the_World_-_Niklas_Dee_xvvfz8.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Asalto",
@@ -8789,7 +8852,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "⚡",
                 g: ["#b91c1c", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Asalto_-_Jul_jrklhi.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Asalto_-_Jul_jrklhi.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Avant la Douane",
@@ -8797,7 +8861,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "🛃",
                 g: ["#6d28d9", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001020/Avant_la_Douane_-_Jul_eoq8s0.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001020/Avant_la_Douane_-_Jul_eoq8s0.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Bande Organisée",
@@ -8805,7 +8870,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "🏙️",
                 g: ["#1c1917", "#78716c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bande_Organis%C3%A9_-_Jul_SCH_Kofs_Naps_Soso_Maness_Elams_Solda_Mouari_vycyk6.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bande_Organis%C3%A9_-_Jul_SCH_Kofs_Naps_Soso_Maness_Elams_Solda_Mouari_vycyk6.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Barbie Girl",
@@ -8813,7 +8879,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1997",
                 emoji: "👱‍♀️",
                 g: ["#9d174d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003646/Barbie_Girl_-_Aqua_q5elwr.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003646/Barbie_Girl_-_Aqua_q5elwr.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Basique",
@@ -8821,7 +8888,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "📐",
                 g: ["#1c1917", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483813/Basique_-_Orelsan_fcrwtn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483813/Basique_-_Orelsan_fcrwtn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Beautiful People",
@@ -8829,7 +8897,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🌟",
                 g: ["#0284c7", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483814/Beautiful_People_-_David_Guetta_Sia_t756jt.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483814/Beautiful_People_-_David_Guetta_Sia_t756jt.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Beggin",
@@ -8837,7 +8906,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "🎸",
                 g: ["#1c1917", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316652/Billie_Jean_-_Micha%C3%ABl_Jackson_rej5a7.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316652/Billie_Jean_-_Micha%C3%ABl_Jackson_rej5a7.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Believe",
@@ -8845,7 +8915,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "✨",
                 g: ["#4c1d95", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483814/Believe_-_Upsilone_kednjg.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483814/Believe_-_Upsilone_kednjg.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Bella",
@@ -8853,7 +8924,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2013",
                 emoji: "🌹",
                 g: ["#9f1239", "#fb7185"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Bella_-_Gims_glgxjl.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Bella_-_Gims_glgxjl.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Béné",
@@ -8861,7 +8933,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "🌑",
                 g: ["#0c0a09", "#78716c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Ben%C3%A9_-_PNL_ageol0.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Ben%C3%A9_-_PNL_ageol0.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Bigroom EDM",
@@ -8869,7 +8942,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "Inconnu",
                 emoji: "🔊",
                 g: ["#1e1b4b", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bigroom-edm_ef922a.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bigroom-edm_ef922a.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Billie Jean",
@@ -8877,7 +8951,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1983",
                 emoji: "💞",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316652/Cheri_Cheri_Lady_-_Moderne_Talking_hef8bo.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316652/Cheri_Cheri_Lady_-_Moderne_Talking_hef8bo.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Blake TT",
@@ -8885,7 +8960,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "Inconnu",
                 emoji: "🎵",
                 g: ["#0f172a", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Blake_TT_wem71v.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483815/Blake_TT_wem71v.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Bloqué",
@@ -8893,7 +8969,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🔒",
                 g: ["#6d28d9", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bloqu%C3%A9_-_Gims_L2B_ln4hle.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bloqu%C3%A9_-_Gims_L2B_ln4hle.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Bohemian Rhapsody",
@@ -8901,7 +8978,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1975",
                 emoji: "🎭",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000812/Bohemian_Rhapsody_-_Queen_fq8da8.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000812/Bohemian_Rhapsody_-_Queen_fq8da8.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Born to Love Ya",
@@ -8909,7 +8987,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "💛",
                 g: ["#b45309", "#fcd34d"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/Born_to_Love_Ya_-_Gabry_Ponte_Natinatasha_Sean_Paul_sh2nsa.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/Born_to_Love_Ya_-_Gabry_Ponte_Natinatasha_Sean_Paul_sh2nsa.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Bwo",
@@ -8917,7 +8996,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "🎤",
                 g: ["#1e40af", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bwo_-_Jul_lfmsqv.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483816/Bwo_-_Jul_lfmsqv.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "C est dur d aimer",
@@ -8925,7 +9005,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "💧",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000662/C_est_dur_d_aimer_-_Jul_n26xcv.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000662/C_est_dur_d_aimer_-_Jul_n26xcv.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "C'est la Vie",
@@ -8933,7 +9014,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1998",
                 emoji: "🌿",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/C_est_la_Vie_-_Khaled_hdkvyg.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/C_est_la_Vie_-_Khaled_hdkvyg.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Charger",
@@ -8941,7 +9023,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "⚡",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/Charger_-_TDB_wvurmn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/Charger_-_TDB_wvurmn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Chemin d'Or",
@@ -8949,7 +9032,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🥇",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/Chemin_d_Or_-_Werenoi_vrtbog.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483817/Chemin_d_Or_-_Werenoi_vrtbog.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Cheri Cheri Lady",
@@ -8957,7 +9041,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1985",
                 emoji: "🎵",
                 g: ["#b91c1c", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316652/Dont_t_stop_the_music_-_Rihanna_hc1sa1.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316652/Dont_t_stop_the_music_-_Rihanna_hc1sa1.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ciel",
@@ -8965,7 +9050,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "",
                 emoji: "☁️",
                 g: ["#0369a1", "#93c5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483818/Ciel_-_Gims_ri2m0u.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483818/Ciel_-_Gims_ri2m0u.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Clic clic pan pan",
@@ -8973,7 +9059,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "📸",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483818/Clic_clic_pan_pan_-_Yanns_en3xfn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483818/Clic_clic_pan_pan_-_Yanns_en3xfn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Coffin Dance",
@@ -8981,7 +9068,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "⚰️",
                 g: ["#1c1917", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483818/Coffin_Dance_-_Astronima_totoox.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483818/Coffin_Dance_-_Astronima_totoox.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Concerto en Do m",
@@ -8989,7 +9077,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "Inconnu",
                 emoji: "🎻",
                 g: ["#78350f", "#d97706"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Concerto_en_Do_m_1er_Mouvement_-_J.C._Bach_pjvdoo.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Concerto_en_Do_m_1er_Mouvement_-_J.C._Bach_pjvdoo.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Cosmo",
@@ -8997,7 +9086,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "🌌",
                 g: ["#111827", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003981/Cosmo_-_Soprano_vfrhzp.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003981/Cosmo_-_Soprano_vfrhzp.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Cover Me in Sunshine",
@@ -9005,7 +9095,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "☀️",
                 g: ["#9d174d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Cover_me_in_Sunshine_-_Pink_naxsyx.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Cover_me_in_Sunshine_-_Pink_naxsyx.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "CR",
@@ -9013,7 +9104,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🖤",
                 g: ["#6d28d9", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004645/CR_-_Werenoi_zhvwmn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004645/CR_-_Werenoi_zhvwmn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Crazy Frog",
@@ -9021,7 +9113,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2005",
                 emoji: "🐸",
                 g: ["#059669", "#6ee7b7"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Crazy_Frog_-_Alex_F_rrt5l7.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Crazy_Frog_-_Alex_F_rrt5l7.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Crusade",
@@ -9029,7 +9122,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "⚔️",
                 g: ["#991b1b", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Crusade_-_Gabry_Ponte_g693ix.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Crusade_-_Gabry_Ponte_g693ix.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Crying in the Dancefloor",
@@ -9037,7 +9131,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "💧",
                 g: ["#0284c7", "#67e8f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Crying_in_the_Dancefloor_-_Sam_Feldt_Sofiloud_rincmi.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483819/Crying_in_the_Dancefloor_-_Sam_Feldt_Sofiloud_rincmi.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dai Dai",
@@ -9045,7 +9140,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🥁",
                 g: ["#374151", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000715/Dai_Dai_-_Shakira_-_Burna_Boy_z67iru.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000715/Dai_Dai_-_Shakira_-_Burna_Boy_z67iru.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dame Un Grr",
@@ -9053,7 +9149,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🔥",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483820/Dame_Un_Grr_-_Fantomel_Kath_Linn_dw0bv6.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483820/Dame_Un_Grr_-_Fantomel_Kath_Linn_dw0bv6.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dance Madisson",
@@ -9061,7 +9158,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1950",
                 emoji: "🌟",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1782368390/Screen_Recording_20260621_021000_YouTube_n6misu.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1782368390/Screen_Recording_20260621_021000_YouTube_n6misu.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dance Monkey",
@@ -9069,7 +9167,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🐒",
                 g: ["#b45309", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003645/Dance_Monkey_-_Tones_and_I_zlv5l5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003645/Dance_Monkey_-_Tones_and_I_zlv5l5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dancing in the Flames",
@@ -9077,7 +9176,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🔥",
                 g: ["#7c2d12", "#f97316"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Dancing_in_the_Flammes_-_The_Weekend_cpbvpq.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Dancing_in_the_Flammes_-_The_Weekend_cpbvpq.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Danza Kuduro",
@@ -9085,7 +9185,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2010",
                 emoji: "🕺",
                 g: ["#b45309", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Danza_Kuduro_-_Don_Omar_revmpw.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Danza_Kuduro_-_Don_Omar_revmpw.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dépassé",
@@ -9093,7 +9194,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🌑",
                 g: ["#1c1917", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483820/D%C3%A9pass%C3%A9_-_Nuit_Incolore_gmjr5p.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483820/D%C3%A9pass%C3%A9_-_Nuit_Incolore_gmjr5p.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dernière Danse",
@@ -9101,7 +9203,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2013",
                 emoji: "💃",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Derni%C3%A8re_Danse_-_Indila_bvcgcg.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Derni%C3%A8re_Danse_-_Indila_bvcgcg.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dernière Danse",
@@ -9109,7 +9212,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "🩰",
                 g: ["#d97706", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011168/Derni%C3%A8re_Danse_-_Indila_lj1n6e.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011168/Derni%C3%A8re_Danse_-_Indila_lj1n6e.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Despacito",
@@ -9117,7 +9221,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "🌊",
                 g: ["#0284c7", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/Despacito_-_Luis_Fonsi_urnyyk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/Despacito_-_Luis_Fonsi_urnyyk.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Diamonds",
@@ -9125,7 +9230,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2012",
                 emoji: "💎",
                 g: ["#9333ea", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Diamonds_-_Rihanna_bei6ls.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483821/Diamonds_-_Rihanna_bei6ls.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dingue",
@@ -9133,7 +9239,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "🌀",
                 g: ["#9d174d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000608/Dingue_-_Soprano_n1zjds.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000608/Dingue_-_Soprano_n1zjds.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Don’t Stop the music",
@@ -9141,7 +9248,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2007",
                 emoji: "☕🎵",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/Espresso_-_Sabrina_Carpenter_t9qno1.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/Espresso_-_Sabrina_Carpenter_t9qno1.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Doudou",
@@ -9149,7 +9257,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "🧸",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004751/Doudou_-_Koba_LaD_-_Naps_d6xdrw.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004751/Doudou_-_Koba_LaD_-_Naps_d6xdrw.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dracula",
@@ -9157,7 +9266,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🧛",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003772/Dracula_-_Tame_Impala_Jennie_gzyruw.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003772/Dracula_-_Tame_Impala_Jennie_gzyruw.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Dynamite",
@@ -9165,7 +9275,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "💥",
                 g: ["#be185d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011251/Dynamite_-_BTS_dtdysq.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011251/Dynamite_-_BTS_dtdysq.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ego",
@@ -9173,7 +9284,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2016",
                 emoji: "👁️",
                 g: ["#6d28d9", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/Ego_-_Willy_William_szolq4.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/Ego_-_Willy_William_szolq4.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Eine Kleine Nachtmusik",
@@ -9181,7 +9293,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1787",
                 emoji: "🎻",
                 g: ["#78350f", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483823/Eine_Kleine_Natchmusik_-_W-A_Mozart_qpjihd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483823/Eine_Kleine_Natchmusik_-_W-A_Mozart_qpjihd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Elektronomia",
@@ -9189,7 +9302,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "🌌",
                 g: ["#1e40af", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/Eleckronomia_-_Sky_High_e46wox.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/Eleckronomia_-_Sky_High_e46wox.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Elle Voulait",
@@ -9197,7 +9311,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "💭",
                 g: ["#7c2d12", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000906/Elle_Voulait_-_RnBoi_aeh8ib.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000906/Elle_Voulait_-_RnBoi_aeh8ib.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Emmenez-moi",
@@ -9205,7 +9320,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1967",
                 emoji: "🚢",
                 g: ["#991b1b", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004806/Emmenez-moi_-_Charles_Aznavour_oxz0ie.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004806/Emmenez-moi_-_Charles_Aznavour_oxz0ie.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "En Feu",
@@ -9213,7 +9329,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2016",
                 emoji: "🔥",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/En_Feu_-_Soprano_ixhcef.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483822/En_Feu_-_Soprano_ixhcef.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Espresso",
@@ -9221,7 +9338,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌸",
                 g: ["#be185d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/Flowers_-_Miley_Cyrus_p8zgqd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/Flowers_-_Miley_Cyrus_p8zgqd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Est-ce que tu m'aimes",
@@ -9229,7 +9347,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2015",
                 emoji: "💘",
                 g: ["#9333ea", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483824/Est-ce-que_tu_m_aimes_-_Gims_trzlpr.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483824/Est-ce-que_tu_m_aimes_-_Gims_trzlpr.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Everytime We Touch",
@@ -9237,7 +9356,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "⚡",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483823/Everytime_we_Touch_-_Upsilone_Cascada_zivwul.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483823/Everytime_we_Touch_-_Upsilone_Cascada_zivwul.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Exotica",
@@ -9245,7 +9365,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🌺",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483823/Exotica_-_Gabry_Ponte_yqyjxs.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483823/Exotica_-_Gabry_Ponte_yqyjxs.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Falbala",
@@ -9253,7 +9374,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🌀",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483824/Falbala_-_Carbonne_sqmbna.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483824/Falbala_-_Carbonne_sqmbna.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Fantaisie Alto",
@@ -9261,7 +9383,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1805",
                 emoji: "🎻",
                 g: ["#78350f", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483830/Fantaisie_Alto_-_J.N_Hummel_ysfeyc.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483830/Fantaisie_Alto_-_J.N_Hummel_ysfeyc.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Felicità",
@@ -9269,7 +9392,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1982",
                 emoji: "😊",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003970/Felicit%C3%A0_-_Al_Bano_Romina_Power_dev3j5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003970/Felicit%C3%A0_-_Al_Bano_Romina_Power_dev3j5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Femme Like U",
@@ -9277,7 +9401,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2004",
                 emoji: "💃",
                 g: ["#0369a1", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004869/Femme_Like_U_-_K-Maro_ifmxdj.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004869/Femme_Like_U_-_K-Maro_ifmxdj.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Flowers",
@@ -9285,7 +9410,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "☕",
                 g: ["#7c2d12", "#f97316"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/Gata_Only_-_FloyyMenor_ft_Cris_MJ_mtkuwe.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/Gata_Only_-_FloyyMenor_ft_Cris_MJ_mtkuwe.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Flying Blue",
@@ -9293,7 +9419,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "💙",
                 g: ["#0284c7", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877903/Flying_Blue_-_La_Fouine_-_L2B_tfht7b.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877903/Flying_Blue_-_La_Fouine_-_L2B_tfht7b.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Flying Blue",
@@ -9301,7 +9428,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "✈️",
                 g: ["#991b1b", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002702/Flying_Blue_-_La_Fouine_-_L2B_ocjjj5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002702/Flying_Blue_-_La_Fouine_-_L2B_ocjjj5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "For Sure",
@@ -9309,7 +9437,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "",
                 emoji: "🇫🇷",
                 g: ["#1e40af", "#a5b4fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483824/For_Sure_-_Welox_-_Emmanuel_Macron_xktzan.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483824/For_Sure_-_Welox_-_Emmanuel_Macron_xktzan.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Forever Young",
@@ -9317,7 +9446,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "💫",
                 g: ["#7c3aed", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483825/Forever_Young_David_Guetta_-_Ava_Max_-_Alphaville_xfq6kk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483825/Forever_Young_David_Guetta_-_Ava_Max_-_Alphaville_xfq6kk.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Free",
@@ -9325,7 +9455,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "🕊️",
                 g: ["#0891b2", "#67e8f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483825/Free_-_Kalvin_Harris_Ellie_Goulding_ztjp9o.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483825/Free_-_Kalvin_Harris_Ellie_Goulding_ztjp9o.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Freed From Desire",
@@ -9333,7 +9464,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1997",
                 emoji: "🔓",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483825/Freed_From_Desire_-_Gala_tr0zfo.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483825/Freed_From_Desire_-_Gala_tr0zfo.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Freestyler",
@@ -9341,7 +9473,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🎤",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483826/Freestyler_-_Boomfunk_Mc_s_Lost_Frequencies_cmk1y2.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483826/Freestyler_-_Boomfunk_Mc_s_Lost_Frequencies_cmk1y2.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Game Started",
@@ -9349,7 +9482,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "🎮",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483826/Game_Started_-_Sound_of_Legend_ezwjnl.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483826/Game_Started_-_Sound_of_Legend_ezwjnl.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Gangnam Style",
@@ -9357,7 +9491,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2012",
                 emoji: "🐴",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483827/Gangnam_Style_-_PSY_e5uefn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483827/Gangnam_Style_-_PSY_e5uefn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Gata Only",
@@ -9365,7 +9500,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🐱",
                 g: ["#b45309", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/One_More_Time_-_Daft_Punk_g3mbgh.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/One_More_Time_-_Daft_Punk_g3mbgh.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Get Lucky",
@@ -9373,7 +9509,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2013",
                 emoji: "🤖",
                 g: ["#b45309", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483827/Get_Lucky_-_Daft_Punk_o1must.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483827/Get_Lucky_-_Daft_Punk_o1must.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Gimme Gimme Gimme",
@@ -9381,7 +9518,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1979",
                 emoji: "🪩",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483827/Gimme_Gimme_Gimme_-_Abba_pro0ic.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483827/Gimme_Gimme_Gimme_-_Abba_pro0ic.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "God is a Girl",
@@ -9389,7 +9527,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "👑",
                 g: ["#6d28d9", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483828/God_is_a_Girl_-_Sound_of_Legend_Groove_Covearge_DJ_Housekat_sbstk5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483828/God_is_a_Girl_-_Sound_of_Legend_Groove_Covearge_DJ_Housekat_sbstk5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Golden",
@@ -9397,7 +9536,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "✨",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/Golden_-_Kpop_D%C3%A9mon_Hunters_egpddd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/Golden_-_Kpop_D%C3%A9mon_Hunters_egpddd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Gone Gone Gone",
@@ -9405,7 +9545,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "💨",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483828/Gone_Gone_Gone_-_David_Guetta_Teddy_Swims_et_Tones_and_I_cgbolc.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483828/Gone_Gone_Gone_-_David_Guetta_Teddy_Swims_et_Tones_and_I_cgbolc.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Good Feeling",
@@ -9413,7 +9554,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2011",
                 emoji: "🌞",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003270/Good_Feeling_-_Flo_Rida_rvknvh.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003270/Good_Feeling_-_Flo_Rida_rvknvh.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Headlights",
@@ -9421,7 +9563,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🚗",
                 g: ["#059669", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011121/Headlights_-_Alok_Alan_Walker_eyyizt.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011121/Headlights_-_Alok_Alan_Walker_eyyizt.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Hearts Still Beating",
@@ -9429,7 +9572,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "❤️",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/Hearts_Still_Beating_-_Nathan_Dawe_B%C3%A9b%C3%A9_Rexa_c69mcj.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/Hearts_Still_Beating_-_Nathan_Dawe_B%C3%A9b%C3%A9_Rexa_c69mcj.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Hôtel Room Service",
@@ -9437,7 +9581,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2009",
                 emoji: "🏨",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/H%C3%B4tel_Room_Service_-_Pitbull_z1apl2.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/H%C3%B4tel_Room_Service_-_Pitbull_z1apl2.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Houdini",
@@ -9445,7 +9590,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🪄",
                 g: ["#111827", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000964/Houdini_-_Dua_Lipa_bhsg66.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000964/Houdini_-_Dua_Lipa_bhsg66.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I Adore You",
@@ -9453,7 +9599,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "💕",
                 g: ["#9f1239", "#fb7185"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/I_Adore_You_-_Hugel_Topic_Arash_jyixew.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/I_Adore_You_-_Hugel_Topic_Arash_jyixew.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I Can Feel",
@@ -9461,7 +9608,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "💫",
                 g: ["#831843", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/I_can_Feel_-_L%C3%A9onie_Niklas_Dee_m20rwu.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483829/I_can_Feel_-_L%C3%A9onie_Niklas_Dee_m20rwu.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I don't Wanna Wait",
@@ -9469,7 +9617,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "⏳",
                 g: ["#0284c7", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483831/I_don_t_Wanna_Wait_-_David_Guetta_One_R%C3%A9public_ni7l2x.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483831/I_don_t_Wanna_Wait_-_David_Guetta_One_R%C3%A9public_ni7l2x.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I Gotta Feeling",
@@ -9477,7 +9626,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2009",
                 emoji: "🎉",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483830/I_Gotta_Feelings_-_The_Black_Eyes_Peas_s5crbb.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483830/I_Gotta_Feelings_-_The_Black_Eyes_Peas_s5crbb.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I Like to Move it",
@@ -9485,7 +9635,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "🕺",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483830/I_Like_to_Move_it_-_MIMAA_Manos_rnx11i.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483830/I_Like_to_Move_it_-_MIMAA_Manos_rnx11i.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I'm Good",
@@ -9493,7 +9644,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "✨",
                 g: ["#1e40af", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483831/I_m_Good_-_David_Guetta_B%C3%A9b%C3%A9_Rexa_chqszk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483831/I_m_Good_-_David_Guetta_B%C3%A9b%C3%A9_Rexa_chqszk.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I'm Still Standing",
@@ -9501,7 +9653,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🏆",
                 g: ["#6d28d9", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483831/I_m_Still_Standing_-_Sound_of_Legend_vvesuz.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483831/I_m_Still_Standing_-_Sound_of_Legend_vvesuz.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "I'm Yours",
@@ -9509,7 +9662,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2008",
                 emoji: "🌿",
                 g: ["#065f46", "#6ee7b7"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/I_m_Yours_-_Jason_Mraz_wrnbf1.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/I_m_Yours_-_Jason_Mraz_wrnbf1.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Impardonnable",
@@ -9517,7 +9671,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "⛓️",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000955/Impardonnable_-_Damso_wd9lea.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788000955/Impardonnable_-_Damso_wd9lea.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "In My Mind",
@@ -9525,7 +9680,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "🧠",
                 g: ["#4c1d95", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483833/In_My_Mind_-_Dynoro_f8zogz.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483833/In_My_Mind_-_Dynoro_f8zogz.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "In The Name Of Love",
@@ -9533,7 +9689,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2016",
                 emoji: "💘",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004939/In_The_Name_Of_Love_-_Martin_Garrix_-_Bebe_Rexha_oemmxe.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788004939/In_The_Name_Of_Love_-_Martin_Garrix_-_Bebe_Rexha_oemmxe.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Infidèle",
@@ -9541,7 +9698,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "💔",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001245/Infid%C3%A8le_-_Blasterjaxx_oyapqa.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001245/Infid%C3%A8le_-_Blasterjaxx_oyapqa.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Instable",
@@ -9549,7 +9707,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "⚖️",
                 g: ["#1e3a5f", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001021/Instable_-_RnBoi_ihmqyy.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001021/Instable_-_RnBoi_ihmqyy.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Is It Love",
@@ -9557,7 +9716,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "💜",
                 g: ["#581c87", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/Is_It_Love_-_Loreen_qx9ajy.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/Is_It_Love_-_Loreen_qx9ajy.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "J me tire",
@@ -9565,7 +9725,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🚪",
                 g: ["#0369a1", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001226/J_me_tire_-_Gims_rbuptc.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001226/J_me_tire_-_Gims_rbuptc.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Jamaican",
@@ -9573,7 +9734,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🇯🇲",
                 g: ["#9333ea", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001441/Jamaican_-_Hugel_-_Solto_c51jhr.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001441/Jamaican_-_Hugel_-_Solto_c51jhr.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Jamal",
@@ -9581,7 +9743,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🖋️",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001470/Jamal_-_Werenoi_vmomqt.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001470/Jamal_-_Werenoi_vmomqt.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Je t aime",
@@ -9589,7 +9752,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "❤️",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001093/Je_t_aime_-_Jul_p7bbni.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001093/Je_t_aime_-_Jul_p7bbni.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Juste un peu",
@@ -9597,7 +9761,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "😌",
                 g: ["#374151", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003755/Juste_un_peu_-_Jungeli_Emma_dapeue.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003755/Juste_un_peu_-_Jungeli_Emma_dapeue.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "La Bohème",
@@ -9605,7 +9770,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1965",
                 emoji: "🎨",
                 g: ["#991b1b", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001185/La_Boh%C3%A8me_-_Charles_Aznavour_owsygr.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001185/La_Boh%C3%A8me_-_Charles_Aznavour_owsygr.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "La foule",
@@ -9613,7 +9779,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1957",
                 emoji: "🎪",
                 g: ["#155e75", "#67e8f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003371/La_foule_-_%C3%89dith_Piaf_n87f4x.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003371/La_foule_-_%C3%89dith_Piaf_n87f4x.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "La Goffa Lolita",
@@ -9621,7 +9788,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2016",
                 emoji: "🎀",
                 g: ["#059669", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001557/La_Goffa_Lolita_-_La_Petite_Culotte_pvxtnb.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001557/La_Goffa_Lolita_-_La_Petite_Culotte_pvxtnb.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "La Recette",
@@ -9629,7 +9797,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🍳",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001307/La_Recette_-_Jeck_-_Carla_grf18z.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001307/La_Recette_-_Jeck_-_Carla_grf18z.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "La Reine de Coeur",
@@ -9637,7 +9806,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1960",
                 emoji: "🃏",
                 g: ["#7c2d12", "#fca5a5"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/La_Reine_de_Coeur_-_Francis_Poulenc_qxgprn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/La_Reine_de_Coeur_-_Francis_Poulenc_qxgprn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Lacriosa",
@@ -9645,7 +9815,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1791",
                 emoji: "🎼",
                 g: ["#78350f", "#d97706"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/Lacriosa_-_W-A_Mozart_rty8jr.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483832/Lacriosa_-_W-A_Mozart_rty8jr.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Laisse-moi",
@@ -9653,7 +9824,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "👋",
                 g: ["#0369a1", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002749/Laisse-moi_-_Keblack_wrqyth.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002749/Laisse-moi_-_Keblack_wrqyth.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Laissez passer",
@@ -9661,7 +9833,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2015",
                 emoji: "🚪",
                 g: ["#7c3aed", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483833/Laissez_passez_-_Gims_mf8uqs.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483833/Laissez_passez_-_Gims_mf8uqs.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Le Coach",
@@ -9669,7 +9842,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "🏋️",
                 g: ["#1c1917", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483833/Le_Coach_-_Soprano_crn2sm.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483833/Le_Coach_-_Soprano_crn2sm.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Le lac des Cygnes",
@@ -9677,7 +9851,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1876",
                 emoji: "🦢",
                 g: ["#0891b2", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001359/Le_lac_des_Cygnes_-_P.I._Tcha%C3%AFkovsky_vr8rue.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001359/Le_lac_des_Cygnes_-_P.I._Tcha%C3%AFkovsky_vr8rue.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Les Démons de Minuit",
@@ -9685,7 +9860,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1986",
                 emoji: "🌙",
                 g: ["#1e1b4b", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Les_d%C3%A9mons_de_Minuit_-_Images_o2yeq3.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Les_d%C3%A9mons_de_Minuit_-_Images_o2yeq3.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Les Lacs du Connemara",
@@ -9693,7 +9869,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1981",
                 emoji: "🏞️",
                 g: ["#be185d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001644/Les_Lacs_du_Connemara_-_Michel_Sardou_wxntbv.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001644/Les_Lacs_du_Connemara_-_Michel_Sardou_wxntbv.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Let Me Love You",
@@ -9701,7 +9878,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2016",
                 emoji: "❤️",
                 g: ["#4c1d95", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003406/Let_Me_Love_You_-_DJ_Snake_ck1fth.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003406/Let_Me_Love_You_-_DJ_Snake_ck1fth.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Lettre à Elise",
@@ -9709,7 +9887,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1810",
                 emoji: "💌",
                 g: ["#312e81", "#a5b4fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Lettre_%C3%A0_Elise_-_L.V._Beethoven_tvslc6.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Lettre_%C3%A0_Elise_-_L.V._Beethoven_tvslc6.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Loca Loca",
@@ -9717,7 +9896,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🦩",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Loca_Loca_-_R3HAD_Pelican_gsogcs.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Loca_Loca_-_R3HAD_Pelican_gsogcs.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Logobitombo",
@@ -9725,7 +9905,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2011",
                 emoji: "🥁",
                 g: ["#7c2d12", "#f97316"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Logobitombo_-_Moussier_Tombola_pdg3br.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Logobitombo_-_Moussier_Tombola_pdg3br.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Lose Yourself",
@@ -9733,7 +9914,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2002",
                 emoji: "🥊",
                 g: ["#0284c7", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001712/Lose_Yourself_-_Eminem_vncbo3.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001712/Lose_Yourself_-_Eminem_vncbo3.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "LVC",
@@ -9741,7 +9923,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🎤",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877904/LVC_-_Shotas_ft_Koba_yoyul6.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877904/LVC_-_Shotas_ft_Koba_yoyul6.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ma Chérie",
@@ -9749,7 +9932,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2011",
                 emoji: "❤️",
                 g: ["#9f1239", "#fb7185"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Ma_Ch%C3%A9rie_-_Dj_Antoine_et_The_Beat_Sheakers_xsspzs.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Ma_Ch%C3%A9rie_-_Dj_Antoine_et_The_Beat_Sheakers_xsspzs.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ma Direction",
@@ -9757,7 +9941,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2010",
                 emoji: "🧭",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001770/Ma_Direction_-_Sexion_d_Assaut_oc5xmh.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001770/Ma_Direction_-_Sexion_d_Assaut_oc5xmh.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ma jolie",
@@ -9765,7 +9950,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "🌸",
                 g: ["#065f46", "#6ee7b7"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Ma_jolie_-_Jul_gda7l5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483834/Ma_jolie_-_Jul_gda7l5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ma Vie",
@@ -9773,7 +9959,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "📖",
                 g: ["#d97706", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001633/Ma_Vie_-_Jul_o62ycn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001633/Ma_Vie_-_Jul_o62ycn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Macarena",
@@ -9781,7 +9968,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1993",
                 emoji: "💃",
                 g: ["#78350f", "#fcd34d"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483835/Macarena-_Los_del_Rio_ynkhyg.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483835/Macarena-_Los_del_Rio_ynkhyg.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Madrid City",
@@ -9789,7 +9977,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🇪🇸",
                 g: ["#b91c1c", "#fca5a5"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483835/Madrid_City_-_Ana_Mena_blhth7.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483835/Madrid_City_-_Ana_Mena_blhth7.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Magic in the Air",
@@ -9797,7 +9986,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "✨",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Magic_in_the_Air_-_Magic_System_v2klhd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Magic_in_the_Air_-_Magic_System_v2klhd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Make You Mouv",
@@ -9805,7 +9995,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2007",
                 emoji: "💃",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Make_you_Mouv_xqbcbf.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Make_you_Mouv_xqbcbf.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Mélodrama",
@@ -9813,7 +10004,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🎭",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/M%C3%A9lodrama_-_Th%C3%A9odora_Diziz_dmyxat.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/M%C3%A9lodrama_-_Th%C3%A9odora_Diziz_dmyxat.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Melrose Place",
@@ -9821,7 +10013,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌆",
                 g: ["#1c1917", "#78716c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Melrose_Place_-_Keblack_gl78dp.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Melrose_Place_-_Keblack_gl78dp.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Memories",
@@ -9829,7 +10022,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "🧠",
                 g: ["#9333ea", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Memories_-_Sam_Feldt_Jonas_Blue_giddiy.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483836/Memories_-_Sam_Feldt_Jonas_Blue_giddiy.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Minimum Ça",
@@ -9837,7 +10031,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🎤",
                 g: ["#059669", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483840/Minimum_%C3%87a_-_Dr._Yaro_gjlyd5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483840/Minimum_%C3%87a_-_Dr._Yaro_gjlyd5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Miss You",
@@ -9845,7 +10040,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "💌",
                 g: ["#0891b2", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483837/Miss_you_-_Oliver_Tree_et_Robin_Schultz_px9hzz.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483837/Miss_you_-_Oliver_Tree_et_Robin_Schultz_px9hzz.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Monster",
@@ -9853,7 +10049,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "👾",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483837/Monster_-_Gabry_Ponte_Lumix_r4vjlf.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483837/Monster_-_Gabry_Ponte_Lumix_r4vjlf.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Moonlight Shadow",
@@ -9861,7 +10058,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌖",
                 g: ["#1e1b4b", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Moonlight_Shadow_-_Sound_of_Legend_prwz8g.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Moonlight_Shadow_-_Sound_of_Legend_prwz8g.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Moulaga",
@@ -9869,7 +10067,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "💰",
                 g: ["#7c2d12", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483838/Moulaga_-_Jul_Heuss_l_Enfoir%C3%A9_vguy6v.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483838/Moulaga_-_Jul_Heuss_l_Enfoir%C3%A9_vguy6v.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Mr / Mme",
@@ -9877,7 +10076,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "💜",
                 g: ["#6d28d9", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483838/Mr-MMe_-_Lo%C3%AFc_Nottet_s728ji.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483838/Mr-MMe_-_Lo%C3%AFc_Nottet_s728ji.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Mr Saxobeat",
@@ -9885,7 +10085,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2010",
                 emoji: "🎷",
                 g: ["#d97706", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877901/Mr_Saxobeat_-_Alexandra_Stan_jnotm1.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877901/Mr_Saxobeat_-_Alexandra_Stan_jnotm1.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "My Heart Will Go On",
@@ -9893,7 +10094,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1997",
                 emoji: "🚢",
                 g: ["#831843", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483838/My_Hearts_Will_Go_On_-_C%C3%A9line_Dion_djzwbk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483838/My_Hearts_Will_Go_On_-_C%C3%A9line_Dion_djzwbk.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Never Back Down",
@@ -9901,7 +10103,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2015",
                 emoji: "⚔️",
                 g: ["#991b1b", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483851/Two_Steps_From_Hell_-_Never_Back_Down_nrlq13.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483851/Two_Steps_From_Hell_-_Never_Back_Down_nrlq13.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Never Going Home",
@@ -9909,7 +10112,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "🏠",
                 g: ["#1c1917", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003540/Never_Going_Home_-_Kungs_dijjxn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003540/Never_Going_Home_-_Kungs_dijjxn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Never Going Home Tonight",
@@ -9917,7 +10121,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🌙",
                 g: ["#312e81", "#a5b4fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Never_Going_Home_Tonight_-_David_Guetta_Alesso_vhoxix.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Never_Going_Home_Tonight_-_David_Guetta_Alesso_vhoxix.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "New Religion",
@@ -9925,7 +10130,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🙏",
                 g: ["#78350f", "#fcd34d"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001808/New_Religion_-_Bebe_Rexha_-_Faithless_tnmxn6.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001808/New_Religion_-_Bebe_Rexha_-_Faithless_tnmxn6.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ninao",
@@ -9933,7 +10139,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🌴",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Ninao_-_Gims_jyr0od.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Ninao_-_Gims_jyr0od.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Nostalgique",
@@ -9941,7 +10148,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "💭",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Nostalgique_-_Jul_naxapx.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Nostalgique_-_Jul_naxapx.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Nouveau Jingle IDFM",
@@ -9949,7 +10157,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "🚇",
                 g: ["#0e7490", "#67e8f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Nouveau_Jingle_Idfm_leh9ra.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483839/Nouveau_Jingle_Idfm_leh9ra.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "On m’appelle l’OVNI",
@@ -9957,7 +10166,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2016",
                 emoji: "🛸",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Appelle_moi_l_Ovni_-_Jul_yn7zss.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483812/Appelle_moi_l_Ovni_-_Jul_yn7zss.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "On oublie pas",
@@ -9965,7 +10175,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🌫️",
                 g: ["#0284c7", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011561/On_oublie_pas_-_Jul_daigc2.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011561/On_oublie_pas_-_Jul_daigc2.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "One in a Million",
@@ -9973,7 +10184,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "💫",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483840/One_in_a_Million_-_David_Guetta_Rexa_lgr2qu.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483840/One_in_a_Million_-_David_Guetta_Rexa_lgr2qu.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "One Kiss",
@@ -9981,7 +10193,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "💋",
                 g: ["#166534", "#4ade80"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003480/One_Kiss_-_Calvin_Harris_Dua_Lipa_xsvq1m.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003480/One_Kiss_-_Calvin_Harris_Dua_Lipa_xsvq1m.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "One more time",
@@ -9989,7 +10202,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2011",
                 emoji: "🤖",
                 g: ["#1e40af", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/San_Francisco_-_Sound_of_Legend_kompkd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316653/San_Francisco_-_Sound_of_Legend_kompkd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Ordinary",
@@ -9997,7 +10211,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🕊️",
                 g: ["#b91c1c", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002070/Ordinary_-_Alex_Warren_xa2x85.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002070/Ordinary_-_Alex_Warren_xa2x85.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Papaoutai",
@@ -10005,7 +10220,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2013",
                 emoji: "👨",
                 g: ["#1c1917", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002079/Papaoutai_-_Stromae_jjxopj.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002079/Papaoutai_-_Stromae_jjxopj.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Parasite",
@@ -10013,7 +10229,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🦠",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002259/Parasite_-_Jul_hfoxu2.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002259/Parasite_-_Jul_hfoxu2.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Parfum Quartier",
@@ -10021,7 +10238,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌆",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011637/Parfum_Quartier_-_Jul_a3vvbp.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011637/Parfum_Quartier_-_Jul_a3vvbp.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Paris",
@@ -10029,7 +10247,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "🗼",
                 g: ["#4c1d95", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001961/Paris_-_Nono_la_Grinta_rqzccy.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001961/Paris_-_Nono_la_Grinta_rqzccy.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Parisienne",
@@ -10037,7 +10256,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🗼",
                 g: ["#6d28d9", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Parisienne_-_Gims_La_Mano_1.9_qgvfoq.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Parisienne_-_Gims_La_Mano_1.9_qgvfoq.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Parle à ma Main",
@@ -10045,7 +10265,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2007",
                 emoji: "🖐️",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788010871/Parle_%C3%A0_ma_Main_-_Fatal_Bazooka_pfd6ts.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788010871/Parle_%C3%A0_ma_Main_-_Fatal_Bazooka_pfd6ts.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Pepas",
@@ -10053,7 +10274,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🍑",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Pepas_-_Farruko_nlw3b5.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Pepas_-_Farruko_nlw3b5.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Pétunias",
@@ -10061,7 +10283,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🌸",
                 g: ["#831843", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001858/P%C3%A9tunias_-_Werenoi_svreol.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001858/P%C3%A9tunias_-_Werenoi_svreol.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Phénoménal",
@@ -10069,7 +10292,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🌟",
                 g: ["#1e40af", "#93c5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Ph%C3%A9nom%C3%A9nal_-_Jul_sqbwad.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Ph%C3%A9nom%C3%A9nal_-_Jul_sqbwad.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Piano",
@@ -10077,7 +10301,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🎹",
                 g: ["#166534", "#4ade80"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001972/Piano_-_Gims_-_Werenoi_oualof.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001972/Piano_-_Gims_-_Werenoi_oualof.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Pilé",
@@ -10085,7 +10310,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🌀",
                 g: ["#155e75", "#67e8f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001914/Pil%C3%A9_-_Mauvais_Djo_wowvds.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788001914/Pil%C3%A9_-_Mauvais_Djo_wowvds.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Pilier",
@@ -10093,7 +10319,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "⚡",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877900/Pilier_-_Ninho_bhnwso.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877900/Pilier_-_Ninho_bhnwso.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Pirate des Caraïbes",
@@ -10101,7 +10328,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2003",
                 emoji: "🏴‍☠️",
                 g: ["#9d174d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002253/Pirate_des_Cara%C3%AFbes_-_Klaus_Badelt_ga7fgd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002253/Pirate_des_Cara%C3%AFbes_-_Klaus_Badelt_ga7fgd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Play Hard",
@@ -10109,7 +10337,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2013",
                 emoji: "🎯",
                 g: ["#0284c7", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Play_Hard_-_David_Guetta_pj10j0.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483841/Play_Hard_-_David_Guetta_pj10j0.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Prélude et Allegro",
@@ -10117,7 +10346,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1910",
                 emoji: "🎻",
                 g: ["#450a0a", "#fca5a5"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Pr%C3%A9lude_et_Allegro_-_Fritz_Kreisler_ealdfh.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Pr%C3%A9lude_et_Allegro_-_Fritz_Kreisler_ealdfh.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Pyramide",
@@ -10125,7 +10355,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🔺",
                 g: ["#374151", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002349/Pyramide_-_Werenoi_wk3ldc.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002349/Pyramide_-_Werenoi_wk3ldc.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Que Pasa",
@@ -10133,7 +10364,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🌶️",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483842/Que_Pasa_-_Dr._Yaro_f5dz6v.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483842/Que_Pasa_-_Dr._Yaro_f5dz6v.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Queen of my Castle",
@@ -10141,7 +10373,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "👑",
                 g: ["#7c3aed", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483842/Queen_of_my_Castle_-_Kris_Kross_Amsterdam_Inna_m97rlh.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483842/Queen_of_my_Castle_-_Kris_Kross_Amsterdam_Inna_m97rlh.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Rock my Body",
@@ -10149,7 +10382,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🎸",
                 g: ["#7f1d1d", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Rock_my_Body_-_R3HAB_Inna_Sash_t1c4k2.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Rock_my_Body_-_R3HAB_Inna_Sash_t1c4k2.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Rondo alla Turca",
@@ -10157,7 +10391,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1783",
                 emoji: "🎻",
                 g: ["#78350f", "#fcd34d"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Rondo_alla_Turca_-_W-A_Mozart_df0v9m.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Rondo_alla_Turca_-_W-A_Mozart_df0v9m.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Roulman",
@@ -10165,7 +10400,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🛞",
                 g: ["#059669", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003053/Roulman_-_DJ_Sebb_acv25e.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003053/Roulman_-_DJ_Sebb_acv25e.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Rush E",
@@ -10173,7 +10409,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🎮",
                 g: ["#1f2937", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Rush_E_-_Andrew_Wrangell_vvg1fk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Rush_E_-_Andrew_Wrangell_vvg1fk.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sad Girls",
@@ -10181,7 +10418,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "😢",
                 g: ["#0891b2", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788010933/Sad_Girls_-_David_Guetta_-_Bebe_Rexha_twtx3l.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788010933/Sad_Girls_-_David_Guetta_-_Bebe_Rexha_twtx3l.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Samba de Janeiro",
@@ -10189,7 +10427,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1997",
                 emoji: "🥁",
                 g: ["#7c2d12", "#f97316"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Samba_de_Janeiro_-_Bellini_kvakb8.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483843/Samba_de_Janeiro_-_Bellini_kvakb8.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "San Francisco",
@@ -10197,7 +10436,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "🌉",
                 g: ["#9d174d", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316654/Unstoppable_-_Sia_jmbpxu.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780316654/Unstoppable_-_Sia_jmbpxu.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sapés comme jamais",
@@ -10205,7 +10445,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2015",
                 emoji: "👔",
                 g: ["#14532d", "#4ade80"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483844/Sap%C3%A9s_comme_jamais_-_Gims_at8eds.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483844/Sap%C3%A9s_comme_jamais_-_Gims_at8eds.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sara perche ti amo",
@@ -10213,7 +10454,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1981",
                 emoji: "🎻",
                 g: ["#b45309", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002197/Sara_perche_ti_amo_-_Ricchi_E_Poveri_ib0o8x.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002197/Sara_perche_ti_amo_-_Ricchi_E_Poveri_ib0o8x.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Save Me Tonight",
@@ -10221,7 +10463,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌃",
                 g: ["#0284c7", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003174/Save_Me_Tonight_-_Jennifer_Lopez_David_Guetta_cgtz8u.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003174/Save_Me_Tonight_-_Jennifer_Lopez_David_Guetta_cgtz8u.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Shake It to the Max",
@@ -10229,7 +10472,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "💃",
                 g: ["#9d174d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483845/Shake_It_to_the_Max_-_FLY_dhovbg.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483845/Shake_It_to_the_Max_-_FLY_dhovbg.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sigma Boy",
@@ -10237,7 +10481,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "😎",
                 g: ["#7c2d12", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002393/Sigma_Boy_-_Betsy_-_%D0%9C%D0%B0%D1%80%D0%B8%D1%8F_%D0%AF%D0%BD%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0_emevpd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002393/Sigma_Boy_-_Betsy_-_%D0%9C%D0%B0%D1%80%D0%B8%D1%8F_%D0%AF%D0%BD%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0_emevpd.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Six-Seven",
@@ -10245,7 +10490,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2026",
                 emoji: "🌺",
                 g: ["#be185d", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780125489/Six-Seven_-_Laurinha_Costa_xfoprs.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1780125489/Six-Seven_-_Laurinha_Costa_xfoprs.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sois pas Timide",
@@ -10253,7 +10499,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "😏",
                 g: ["#4c1d95", "#8b5cf6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483845/Sois_pas_Timide_-_Gims_lfgo1e.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483845/Sois_pas_Timide_-_Gims_lfgo1e.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Soleil",
@@ -10261,7 +10508,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "☀️",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002373/Soleil_-_Gims_vyyxxw.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002373/Soleil_-_Gims_vyyxxw.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Soleil Bleu",
@@ -10269,7 +10517,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2022",
                 emoji: "🔵",
                 g: ["#6d28d9", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002549/Soleil_Bleu_-_Luiza_iqljxn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002549/Soleil_Bleu_-_Luiza_iqljxn.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Some Kind of Kiss",
@@ -10277,7 +10526,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "💋",
                 g: ["#831843", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483844/Some_Kind_of_Kiss_-_Sound_of_Legend_otxi57.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483844/Some_Kind_of_Kiss_-_Sound_of_Legend_otxi57.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Someone to be Mine",
@@ -10285,7 +10535,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "❤️",
                 g: ["#9f1239", "#fb7185"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483845/Someone_to_be_Mine_-_Boris_Way_Topic_vychwt.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483845/Someone_to_be_Mine_-_Boris_Way_Topic_vychwt.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Somewhere",
@@ -10293,7 +10544,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1957",
                 emoji: "🌃",
                 g: ["#1e3a5f", "#93c5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483844/Somewhere_-_West_Side_Story_yvdubp.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483844/Somewhere_-_West_Side_Story_yvdubp.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sonate Clair de Lune 1",
@@ -10301,7 +10553,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1801",
                 emoji: "🎹",
                 g: ["#312e81", "#a5b4fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/Sonate_au_Clair_de_Lune_1er_Mouvement_-_L-W_Beethoven_xdi4kv.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/Sonate_au_Clair_de_Lune_1er_Mouvement_-_L-W_Beethoven_xdi4kv.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sonate Clair de Lune 3",
@@ -10309,7 +10562,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1801",
                 emoji: "🌙",
                 g: ["#1e1b4b", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Sonate_au_Clair_de_Lune_3eme_Mouvement_-_L-W_Beethoven_riue8t.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Sonate_au_Clair_de_Lune_3eme_Mouvement_-_L-W_Beethoven_riue8t.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "SPA",
@@ -10317,7 +10571,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🛁",
                 g: ["#0e7490", "#67e8f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/SPA_-_Gims_-_Th%C3%A9odora_x2mifi.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/SPA_-_Gims_-_Th%C3%A9odora_x2mifi.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Spider",
@@ -10325,7 +10580,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🕷️",
                 g: ["#0c0a09", "#a8a29e"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/Spider_-_Gims_h9rhsa.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/Spider_-_Gims_h9rhsa.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Starlight",
@@ -10333,7 +10589,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2015",
                 emoji: "✨",
                 g: ["#111827", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002542/Starlight_-_Muse_tq3rb9.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002542/Starlight_-_Muse_tq3rb9.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Suavemente",
@@ -10341,7 +10598,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2019",
                 emoji: "🌶️",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002454/Suavemente_-_Soolking_ytqbsp.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002454/Suavemente_-_Soolking_ytqbsp.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sun Is Up",
@@ -10349,7 +10607,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2010",
                 emoji: "🌞",
                 g: ["#78350f", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/Sun_Is_Up_-_Inna_inu2jl.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483846/Sun_Is_Up_-_Inna_inu2jl.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sur ma Route",
@@ -10357,7 +10616,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "🛣️",
                 g: ["#1c1917", "#78716c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Sur_ma_Route_-_Black_M_o19s6o.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Sur_ma_Route_-_Black_M_o19s6o.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Sweet Dreams",
@@ -10365,7 +10625,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1983",
                 emoji: "💤",
                 g: ["#78350f", "#fcd34d"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003309/Sweet_Dreams_-_Eurythmics_wgmkja.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003309/Sweet_Dreams_-_Eurythmics_wgmkja.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Symphonie en Do",
@@ -10373,7 +10634,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1855",
                 emoji: "🎼",
                 g: ["#78350f", "#d97706"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Symphonie_en_Do_2_Mouvement_G._Bizet_jzsl59.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Symphonie_en_Do_2_Mouvement_G._Bizet_jzsl59.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tahiti",
@@ -10381,7 +10643,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2012",
                 emoji: "🌺",
                 g: ["#065f46", "#6ee7b7"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Tahiti_-_Keen_V_fyysxj.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483847/Tahiti_-_Keen_V_fyysxj.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tatoo",
@@ -10389,7 +10652,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🎗️",
                 g: ["#581c87", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/Tatoo_-_Loreen_uxobny.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/Tatoo_-_Loreen_uxobny.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tchikita",
@@ -10397,7 +10661,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2018",
                 emoji: "💃",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002871/Tchikita_-_Jul_cajpba.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002871/Tchikita_-_Jul_cajpba.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Terminal 2F",
@@ -10405,7 +10670,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "✈️",
                 g: ["#164e63", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/Terminal_2F_-_Gims_Dadju_k9bgda.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/Terminal_2F_-_Gims_Dadju_k9bgda.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "The Dead Dance",
@@ -10413,7 +10679,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "💀",
                 g: ["#0f172a", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/The_Dead_Dance_-_Lady_Gaga_n0s79k.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/The_Dead_Dance_-_Lady_Gaga_n0s79k.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "The Fate of Ophélia",
@@ -10421,7 +10688,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🌹",
                 g: ["#831843", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/The_Fate_of_Oph%C3%A9lia_-_Taylor_Swift_rqzysk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/The_Fate_of_Oph%C3%A9lia_-_Taylor_Swift_rqzysk.mp3",
+                lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "The Final Countdown",
@@ -10429,7 +10697,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1986",
                 emoji: "🚀",
                 g: ["#7c2d12", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/The_Final_Countdown_-_Europe_kupcbn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/The_Final_Countdown_-_Europe_kupcbn.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "The Magic Key",
@@ -10437,7 +10706,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🔑",
                 g: ["#701a75", "#e879f9"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/The_Magic_Key_-_Trinix_gciubv.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483848/The_Magic_Key_-_Trinix_gciubv.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "The Sound of Silence",
@@ -10445,7 +10715,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2024",
                 emoji: "🔇",
                 g: ["#374151", "#9ca3af"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483849/The_Sound_of_Silence_-_Cyril_qsc5tk.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483849/The_Sound_of_Silence_-_Cyril_qsc5tk.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "The Winner Takes It All",
@@ -10453,7 +10724,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1980",
                 emoji: "🏆",
                 g: ["#9333ea", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011026/The_Winner_Takes_It_All_-_ABBA_bqj5za.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788011026/The_Winner_Takes_It_All_-_ABBA_bqj5za.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "This Is the Life",
@@ -10461,7 +10733,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2007",
                 emoji: "☀️",
                 g: ["#92400e", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483849/This_is_the_Life_-_Amy_Macdonald_yqc43z.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483849/This_is_the_Life_-_Amy_Macdonald_yqc43z.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Thunder",
@@ -10469,7 +10742,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "⛈️",
                 g: ["#1e40af", "#818cf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/Thunder_-_Gabry_Ponte_Lumix_uxlewh.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/Thunder_-_Gabry_Ponte_Lumix_uxlewh.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tiki Tiki",
@@ -10477,7 +10751,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🌴",
                 g: ["#059669", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877901/Tiki_Tiki_-_Qmir_p0aoai.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1779877901/Tiki_Tiki_-_Qmir_p0aoai.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Titanium",
@@ -10485,7 +10760,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2011",
                 emoji: "🔩",
                 g: ["#1e3a5f", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483851/Titanium_David_Guetta_Sia_dxshjn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483851/Titanium_David_Guetta_Sia_dxshjn.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tourner dans le Vide",
@@ -10493,7 +10769,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2014",
                 emoji: "🌀",
                 g: ["#9333ea", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002941/Tourner_dans_le_Vide_-_Indila_p74nja.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002941/Tourner_dans_le_Vide_-_Indila_p74nja.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Trailer Sport Stylish",
@@ -10501,7 +10778,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "Inconnu",
                 emoji: "🏁",
                 g: ["#111827", "#6b7280"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/Trailer_Sport_Stylish_aulxai.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/Trailer_Sport_Stylish_aulxai.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Train de Vie",
@@ -10509,7 +10787,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🚆",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002750/Train_de_Vie_-_Koba_laD_jenmib.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002750/Train_de_Vie_-_Koba_laD_jenmib.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tropical",
@@ -10517,7 +10796,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🏝️",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/Tropical_-_Jul_a5rg4r.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483850/Tropical_-_Jul_a5rg4r.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Tu me rends bête",
@@ -10525,7 +10805,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🧠",
                 g: ["#6d28d9", "#c4b5fd"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483851/Tu_me_rends_b%C3%AAte_-_Gims_ilrc2g.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483851/Tu_me_rends_b%C3%AAte_-_Gims_ilrc2g.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Vida Loca",
@@ -10533,7 +10814,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🎉",
                 g: ["#ea580c", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Vida_Loca_-_Magic_System_bwyuqw.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Vida_Loca_-_Magic_System_bwyuqw.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Wahey",
@@ -10541,7 +10823,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🎶",
                 g: ["#065f46", "#34d399"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002633/Wahey_-_Theodort_ym18ac.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002633/Wahey_-_Theodort_ym18ac.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Walking Away",
@@ -10549,7 +10832,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2025",
                 emoji: "🚶",
                 g: ["#0891b2", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Walking_Away_-_Matway_June_fbnuun.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Walking_Away_-_Matway_June_fbnuun.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Wesh Alors",
@@ -10557,7 +10841,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2015",
                 emoji: "🌊",
                 g: ["#1d4ed8", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Wesh_Alors_-_Jul_pqhzgm.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Wesh_Alors_-_Jul_pqhzgm.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "When Love Takes Over",
@@ -10565,7 +10850,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2009",
                 emoji: "💞",
                 g: ["#d97706", "#fbbf24"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003073/When_Love_Takes_Over_-_David_Guetta_-_Kelly_Rowland_wg8vyn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003073/When_Love_Takes_Over_-_David_Guetta_-_Kelly_Rowland_wg8vyn.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "When We Were Young",
@@ -10573,7 +10859,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "💜",
                 g: ["#9333ea", "#f472b6"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483853/When_We_Were_Young_-_David_Guetta_Kim_Petras_k6fifd.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483853/When_We_Were_Young_-_David_Guetta_Kim_Petras_k6fifd.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Where Are You Now",
@@ -10581,7 +10868,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🌐",
                 g: ["#0369a1", "#38bdf8"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Where_Are_You_Now_Lost_Frequencies_jkobo7.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483852/Where_Are_You_Now_Lost_Frequencies_jkobo7.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Without Me",
@@ -10589,7 +10877,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2002",
                 emoji: "🎙️",
                 g: ["#0891b2", "#22d3ee"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002912/Without_Me_-_Eminem_uvqjdn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002912/Without_Me_-_Eminem_uvqjdn.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Y que Fue",
@@ -10597,7 +10886,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2020",
                 emoji: "🎺",
                 g: ["#dc2626", "#f87171"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003008/Y_que_Fue_-_Don_Miguelo_jntpsr.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003008/Y_que_Fue_-_Don_Miguelo_jntpsr.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Yapaque",
@@ -10605,7 +10895,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2021",
                 emoji: "🔥",
                 g: ["#831843", "#f9a8d4"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003330/Yapaque_-_Farruko_Greeicy_Steve_Aoki_coazrn.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003330/Yapaque_-_Farruko_Greeicy_Steve_Aoki_coazrn.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Yeah",
@@ -10613,7 +10904,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2004",
                 emoji: "🎤",
                 g: ["#7c3aed", "#a78bfa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483853/Yeah_-_Usher_lrfcrb.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483853/Yeah_-_Usher_lrfcrb.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "YMCA",
@@ -10621,7 +10913,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "1978",
                 emoji: "🏳️‍🌈",
                 g: ["#1e3a5f", "#60a5fa"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002626/YMCA_-_Village_People_b9oy70.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788002626/YMCA_-_Village_People_b9oy70.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "You Keep Me Hangin' On",
@@ -10629,7 +10922,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2023",
                 emoji: "🎵",
                 g: ["#9333ea", "#c084fc"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483811/You_Keep_me_Hangin_On_Sound_of_Legend_qwdzhc.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1778483811/You_Keep_me_Hangin_On_Sound_of_Legend_qwdzhc.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             {
                 title: "Zoo",
@@ -10637,7 +10931,8 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 year: "2017",
                 emoji: "🦁",
                 g: ["#7c2d12", "#fb923c"],
-                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003777/Zoo_-_Shakira_tsupcs.mp3"
+                url: "https://res.cloudinary.com/dmvoedoe6/video/upload/v1788003777/Zoo_-_Shakira_tsupcs.mp3",
+            lyrics: "Paroles non disponible<br>En cours..."
             },
             ];
 
@@ -10828,7 +11123,91 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 const sc = document.getElementById('settingCurrentTitle');
                 if (sc)
                     sc.textContent = t.title + ' — ' + t.artist;
+                renderLyrics(t);
             }
+
+            let lyricsLines = [];
+            let lyricsActiveIdx = -1;
+
+            const LYRICS_MAX_LINES = 6;
+            let staticLyricsLines = [];
+            let staticLyricsExpanded = false;
+            let staticLyricsTitle = '';
+
+            function renderLyrics(track) {
+                const box = document.getElementById('npLyricsInner');
+                if (track.lyrics && track.lyrics.trim()) {
+                    lyricsLines = [];
+                    lyricsActiveIdx = -1;
+                    staticLyricsTitle = track.title;
+                    staticLyricsLines = track.lyrics.split(/<br\s*\/?>/i).map(l => l.trim()).filter(Boolean);
+                    staticLyricsExpanded = false;
+                    paintStaticLyrics();
+                    return;
+                }
+                lyricsLines = LYRICS_DB[track.title] || [];
+                lyricsActiveIdx = -1;
+                if (!lyricsLines.length) {
+                    staticLyricsTitle = track.title;
+                    staticLyricsLines = ['Aucune paroles pour le moment'];
+                    staticLyricsExpanded = false;
+                    paintStaticLyrics();
+                    return;
+                }
+                box.innerHTML = `<div class="np-lyrics-header">Paroles</div><div class="np-lyrics-subtitle">${track.title}</div>` +
+                    lyricsLines.map((l, i) =>
+                        `<p class="np-lyrics-line${l.chorus ? ' np-lyrics-chorus' : ''}" data-i="${i}">${l.text}</p>`
+                    ).join('');
+            }
+
+            function paintStaticLyrics() {
+                const box = document.getElementById('npLyricsInner');
+                const lines = staticLyricsLines;
+                let bodyHtml;
+                if (lines.length > LYRICS_MAX_LINES && !staticLyricsExpanded) {
+                    const visible = lines.slice(0, LYRICS_MAX_LINES);
+                    const last = visible.pop();
+                    bodyHtml = visible.join('<br>') + (visible.length ? '<br>' : '') + last +
+                        '… <span class="np-lyrics-more" onclick="toggleLyricsExpand()">Afficher plus</span>';
+                } else if (lines.length > LYRICS_MAX_LINES && staticLyricsExpanded) {
+                    bodyHtml = lines.join('<br>') +
+                        '<br><span class="np-lyrics-more" onclick="toggleLyricsExpand()">Fermer</span>';
+                } else {
+                    bodyHtml = lines.join('<br>');
+                }
+                box.innerHTML = `<div class="np-lyrics-header">Paroles</div><div class="np-lyrics-subtitle">${staticLyricsTitle}</div><div class="np-lyrics-text">${bodyHtml}</div>`;
+            }
+
+            function toggleLyricsExpand() {
+                staticLyricsExpanded = !staticLyricsExpanded;
+                paintStaticLyrics();
+                if (!staticLyricsExpanded) {
+                    document.getElementById('npLyrics').scrollTop = 0;
+                }
+            }
+
+            function updateLyricsSync(time) {
+                if (!lyricsLines.length) return;
+                let idx = -1;
+                for (let i = 0; i < lyricsLines.length; i++) {
+                    if (time >= lyricsLines[i].t) idx = i; else break;
+                }
+                if (idx === lyricsActiveIdx) return;
+                lyricsActiveIdx = idx;
+                const box = document.getElementById('npLyricsInner');
+                box.querySelectorAll('.np-lyrics-line').forEach(el => el.classList.remove('active', 'past'));
+                if (idx >= 0) {
+                    const el = box.querySelector(`[data-i="${idx}"]`);
+                    if (el) {
+                        el.classList.add('active');
+                        el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                    }
+                    for (let i = 0; i < idx; i++) {
+                        box.querySelector(`[data-i="${i}"]`)?.classList.add('past');
+                    }
+                }
+            }
+
 
             function updateIcons() {
                 const ico = playing ? '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>' : '<polygon points="5 3 19 12 5 21 5 3"/>';
@@ -10925,6 +11304,7 @@ toInput.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault()
                 document.getElementById('npTot').textContent = fmt(aud.duration);
                 document.getElementById('mpCurTime').textContent = fmt(aud.currentTime);
                 document.getElementById('mpTotTime').textContent = fmt(aud.duration);
+                updateLyricsSync(aud.currentTime);
             }
             );
             aud.addEventListener('ended', () => {
@@ -14433,7 +14813,7 @@ function fbErrorMessage(err){
   return map[err.code] || err.message;
 }
 
-document.getElementById('btnLogin').addEventListener('click', ()=>{
+function doLogin(){
   const pseudo=document.getElementById('loginEmail').value.trim();
   const pass=document.getElementById('loginPass').value;
   if(!pseudo||!pass){ gateError.textContent="Renseignez pseudo et mot de passe."; return; }
@@ -14452,7 +14832,10 @@ document.getElementById('btnLogin').addEventListener('click', ()=>{
     }
     else gateError.textContent="Identifiants invalides — ce site tourne en mode simulation locale (aucune configuration Firebase valide détectée), le compte doit avoir été créé dans ce même navigateur.";
   }
-});
+}
+document.getElementById('btnLogin').addEventListener('click', doLogin);
+document.getElementById('loginEmail').addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); doLogin(); } });
+document.getElementById('loginPass').addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); doLogin(); } });
 
 document.getElementById('btnSignup').addEventListener('click', async ()=>{
   const pseudo=document.getElementById('signupName').value.trim();
